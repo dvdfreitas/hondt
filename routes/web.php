@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Story;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/noticias', function () {
+    $stories = Story::all();
+    return view('stories', ['stories' => $stories]);
+});
+
+
+Route::get('/votes', function () {
+    $users = User::all();
+    return view('votes', ['users' => $users]);
+});
+
 
 Route::get('/users', function () {
     $users = User::all();
