@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             // PartySeeder::class
-            StorySeeder::class
+            StorySeeder::class,
+            CategorySeeder::class
         ]);
     }
 }
