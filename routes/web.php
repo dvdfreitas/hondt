@@ -24,6 +24,11 @@ Route::get('/noticias', function () {
     return view('stories', ['stories' => $stories]);
 });
 
+Route::get('/noticias2', function () {
+    return view('stories2');
+});
+
+
 
 Route::get('/votes', function () {
     $users = User::all();

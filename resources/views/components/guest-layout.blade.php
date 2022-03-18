@@ -20,12 +20,15 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
+        @livewireStyles
     </head>
-    <body class="antialiased">
-        <div class="flex">
-            <div class="bg-blue-500 m-4 p-4 border hover:bg-blue-600">Página inicial</div>
-            <div class="bg-blue-500 m-4 p-4 border hover:bg-blue-600">Notícias</div>
-        </div>
+    <body class="antialiased max-w-5xl m-auto">
+        <x-menu/>
         {{ $slot }}
+        @livewireScripts
     </body>
+    
+    <div style="height: 4000px">A</div>
+
+    <x-footer/>
 </html>
