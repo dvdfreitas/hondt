@@ -13,6 +13,9 @@
         <input type="file" wire:model="photo">
         @error('photo') <div class="text-red-800">{{ $message }}</div> @enderror
     </div>
+    @if ($photo)
+        <img class="w-48" src="{{ $photo->temporaryUrl() }}"/>
+    @endif
     <button wire:click="create()" class="my-4 bg-blue-800 text-white px-4 py-2 hover:bg-blue-900 border rounded">Criar</button>
     {{ $photo }}
 </div>
