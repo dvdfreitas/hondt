@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Event;
 use App\Models\Story;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
@@ -19,6 +20,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/eventos/criar', function () {
+    return view('events.create');
+});
+
+Route::get('/eventos', function () {
+    $events = Event::all();
+    return view('events.index', ['events' => $events]);
+});
+
+
 Route::get('/noticias', function () {
     $stories = Story::all();
     return view('stories', ['stories' => $stories]);
@@ -27,6 +38,7 @@ Route::get('/noticias', function () {
 Route::get('/noticias2', function () {
     return view('stories2');
 });
+
 
 
 

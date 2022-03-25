@@ -23,12 +23,12 @@
         @livewireStyles
     </head>
     <body class="antialiased max-w-5xl m-auto">
-        <x-menu/>
+        
         {{ $slot }}
+        
         @livewireScripts
     </body>
     
-    <div style="height: 4000px">A</div>
-
-    <x-footer/>
+    
+    
 </html>
